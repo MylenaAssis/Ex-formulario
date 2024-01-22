@@ -1,25 +1,32 @@
 const form = document.getElementById('formulario')
 
-document.getElementById('btn').addEventListener('click', function() {
-    validaFormulario();
-});
-
-function validaFormulario() {
-    var valorA = parseFloat(document.getElementById('campo-a').value);
-    var valorB = parseFloat(document.getElementById('campo-b').value);
-
-    if (valorB > valorA) {
-      alert('O valor do campo B é maior que o valor do campo A.');
-    } else {
-        alert('Outra opcao')
-    }
-};
-
 form.addEventListener('submit', function(e){
     e.preventDefault();
 })
 
 console.log(form)
+
+document.getElementById('btn').addEventListener('click', function() {
+    validaFormulario();
+});
+
+function validaFormulario() {
+    const valorA = parseFloat(document.getElementById('campo-a').value);
+    const valorB = parseFloat(document.getElementById('campo-b').value);
+    const mensagemSucesso = 'O valor B é maior que A';
+    const mensagemErro = 'O valor B deve ser maior que A. Preencha novamente.'
+
+    if (valorB > valorA) {
+        alert(mensagemSucesso);
+        document.getElementById('campo-a').value = '';
+        document.getElementById('campo-b').value = '';
+
+    } else {
+        alert(mensagemErro)
+    }
+};
+
+
 
 
 
