@@ -19,3 +19,19 @@ input, button {
     width: 100%;
     resize: none;
 }
+
+.successMessage {
+    padding: 8px;
+    background-color: green;
+    color: #fff;
+    display: none;
+}
+
+.errorMessage {
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: red;
+    color: #fff;
+    font-size: 12px;
+    display: none;
+}
